@@ -1,0 +1,33 @@
+.center_t {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .center_t h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .center_t p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: white;
+    }
+
+    .btn {
+      background-color: #fdbb5d;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e5a94f;
+    }

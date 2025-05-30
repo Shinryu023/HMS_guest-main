@@ -1,0 +1,347 @@
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-header p {
+    margin-left: 20px;
+    flex: auto;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.add-btn {
+    width: 125px;
+    height: 90%;
+    background-color: #1cb7ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+.add-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.amenities {
+    width: 100%;
+    height: 852px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.category-container {
+    width: flex 1;
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.category-container .header {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.category-container .header p {
+    flex: auto;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.buttons {
+    height: 100%;
+    width: auto;
+    display: flex;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 8px;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.edit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.edit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.edit-btn img,
+.delete-btn img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.delete-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.delete-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+.amenity-list {
+    height: 238px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Amenity Add Modal Styles (unique and meaningful class names) */
+.amenity-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenity-modal.active {
+    display: flex;
+}
+
+.amenity-modal-form {
+    width: 400px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    position: relative;
+}
+
+.amenity-modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.amenity-modal-body {
+    flex: auto;
+    width: 100%;
+}
+
+.amenity-category-input {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.amenity-modal-amenity-list-container {
+    margin-top: 10px;
+}
+.amenity-modal-amenity-list-header {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.amenity-modal-add-amenity-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.amenity-amenity-input {
+    flex: 1;
+    height: 36px;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+.amenity-add-amenity-btn,
+.edit-amenity-add-amenity-btn {
+    background: #1cb7ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.amenity-add-amenity-btn:hover,
+.edit-amenity-add-amenity-btn:hover {
+    background: #0080c0;
+}
+
+.amenity-modal-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.amenity-modal-submit-btn,
+.amenity-modal-cancel-btn {
+    flex: 1;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.amenity-modal-submit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.amenity-modal-submit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.amenity-modal-cancel-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.amenity-modal-cancel-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+.amenity-list-header {
+    width: 100%;
+    height: 20px;
+}
+
+.amenity-list-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-amenity-container {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+}
+
+.add-amenity-container input {
+    flex: auto;
+    height: 100%;
+}
+
+.add-amenity-container button {
+    width: 125px;
+    background-color: #1cb7ff;
+    color: white;
+    height: 100%;
+    font-size: 12px;
+    transition: all 0.3s ease-out;
+    border: none;
+    border-radius: 10px;
+}
+
+.add-amenity-container button:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.amenity-modal-amenity-list,
+.edit-amenity-modal-amenity-list {
+    width: 100%;
+    height: 310px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(240, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1px;
+}
+
+.amenity-modal-amenity-item {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+/* Notification styles for amenity modal (matches JS notification) */
+.amenity-notification {
+    display: none;
+    position: fixed;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    max-width: 90vw;
+    background: #ff5429;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 2001;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    box-sizing: border-box;
+}

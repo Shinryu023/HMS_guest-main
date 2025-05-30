@@ -1,0 +1,116 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      scroll-behavior:smooth;
+    }
+    
+         /* Navbar CSS */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fff;
+      border-bottom: 2px solid #e0e0e0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover, .nav-links a:active {
+      color: orange;
+    }
+
+    /* Guess Profile CSS */
+    .profile {
+      text-align: right;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .email {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .profile img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+
+    
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 140px 20px 60px; /* leave space for fixed navbar */
+    }
+
+    #home {
+      color: white;
+      text-align: center;
+      background: url('../images/Home/homebanner.png') center no-repeat center/cover;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    #home .btn {
+      padding: 10px 20px;
+      background-color: orange;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }

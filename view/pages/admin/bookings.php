@@ -1,0 +1,1 @@
+<p>Bookings Page</p>

@@ -1,0 +1,650 @@
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-header p {
+    margin-left: 20px;
+    flex: auto;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.add-menu-btn {
+    width: 125px;
+    height: 90%;
+    background-color: #1cb7ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+.add-menu-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-content .header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+    display: flex;
+}
+
+.all-btn,
+.cat-btn {
+    height: 100%;
+    width: auto;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.active-cat-btn {
+    background-color: rgb(28, 190, 98);
+    border-radius: 10px;
+}
+
+.categories {
+    flex: auto;
+    height: 100%;
+}
+
+.edit-cat-btn {
+    height: 40px;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    color: darkgreen;
+    border: none;
+    border-radius: 5px;
+    background-color: #61ff31;
+    transition: all 0.3s ease-out;
+}
+
+.edit-cat-btn:hover {
+    background-color: #30f100;
+    transition: all 0.3s ease-in;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 8px;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.edit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.edit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.edit-btn img,
+.delete-btn img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.delete-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.delete-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+
+
+/* MODALS */
+
+.menu-cat-modal,
+.add-menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.menu-cat-modal.active,
+.add-menu-modal.active {
+    display: flex;
+}
+
+.menu-cat-modal-form,
+.add-menu-modal-form {
+    width: 400px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    position: relative;
+}
+.menu-cat-modal-header,
+.add-menu-modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.menu-cat-modal-body {
+    flex: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.add-menu-modal-body {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.menu-cat-modal-body {  
+    height: 40px;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+.menu-cat-input {
+    flex: 1;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+.add-menu-input,
+.add-menu-select {
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+.menu-cat-add-btn {
+    background: #1cb7ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.menu-cat-add-btn:hover {
+    background: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.menu-cat-modal-category-list {
+    width: 100%;
+    height: 310px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(240, 240, 240);
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 1px;
+    margin-bottom: 20px;
+}
+
+.menu-cat-modal-footer,
+.add-menu-modal-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-cat-modal-submit-btn,
+.menu-cat-modal-cancel-btn,
+.add-menu-modal-submit-btn,
+.add-menu-modal-cancel-btn {
+    flex: 1;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-cat-modal-submit-btn,
+.add-menu-modal-submit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.menu-cat-modal-submit-btn:hover,
+.add-menu-modal-submit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.menu-cat-modal-cancel-btn,
+.add-menu-modal-cancel-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.menu-cat-modal-cancel-btn:hover,
+.add-menu-modal-cancel-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+.menu-cat-modal-category-item,
+.add-menu-modal-category-item {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+/* MODAL NOTIFICATION */
+
+.menu-cat-notification {
+    display: none;
+    position: fixed;
+    top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    max-width: 90vw;
+    background: #ff5429;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 2001;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.add-menu-file-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.add-menu-file-btn {
+    background: orange;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 12px;
+    font-size: 10px;
+    font-weight: 600;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-menu-file-btn:hover {
+    background: #ff8800;
+    transition: all 0.3s ease-in;
+}
+
+.add-menu-file-input {
+    flex: 1;
+    min-width: 0;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+    background: #fff;
+    font-size: 10px;
+    line-height: 30px; /* Vertically center the file path text */
+}
+.add-menu-file-input::-webkit-file-upload-button {
+    display: none;
+}
+.add-menu-file-input::file-selector-button {
+    display: none;
+}
+
+.add-menu-status-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    gap: 4px;
+}
+.add-menu-status-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #333;
+    text-align: left;
+}
+.add-menu-status-checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+.add-menu-status-checkboxes label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-list {
+    width: 100%;
+    height: 742px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+}
+
+/* DELETE MENU MODAL (matches amenity modal style) */
+.menu-delete-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.menu-delete-modal.active {
+    display: flex;
+}
+.menu-delete-modal-form {
+    width: 400px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    position: relative;
+}
+.menu-delete-modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.menu-delete-modal-body {
+    flex: auto;
+    width: 100%;
+}
+.menu-delete-modal-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.menu-delete-modal-submit-btn,
+.menu-delete-modal-cancel-btn {
+    flex: 1;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.menu-delete-modal-submit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+.menu-delete-modal-submit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+.menu-delete-modal-cancel-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+.menu-delete-modal-cancel-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+/* EDIT MENU MODAL (share style with add menu modal) */
+.edit-menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.edit-menu-modal.active {
+    display: flex;
+}
+.edit-menu-modal-form {
+    width: 400px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    position: relative;
+}
+.edit-menu-modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.edit-menu-modal-body {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+}
+.edit-menu-input,
+.edit-menu-select {
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 6px;
+}
+.edit-menu-file-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+.edit-menu-file-btn {
+    background: orange;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 12px;
+    font-size: 10px;
+    font-weight: 600;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-menu-file-btn:hover {
+    background: #ff8800;
+    transition: all 0.3s ease-in;
+}
+.edit-menu-file-input {
+    flex: 1;
+    min-width: 0;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+    background: #fff;
+    font-size: 10px;
+    line-height: 30px;
+}
+.edit-menu-file-input::-webkit-file-upload-button {
+    display: none;
+}
+.edit-menu-file-input::file-selector-button {
+    display: none;
+}
+.edit-menu-status-row {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    gap: 4px;
+}
+.edit-menu-status-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: #333;
+    text-align: left;
+}
+.edit-menu-status-checkboxes {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+.edit-menu-status-checkboxes label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.edit-menu-modal-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.edit-menu-modal-submit-btn,
+.edit-menu-modal-cancel-btn {
+    flex: 1;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.edit-menu-modal-submit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+.edit-menu-modal-submit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+.edit-menu-modal-cancel-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+.edit-menu-modal-cancel-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}

@@ -1,0 +1,258 @@
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-header p {
+    margin-left: 20px;
+    flex: auto;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.main-header .list {
+    height: 100%;
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.add-btn {
+    width: 125px;
+    height: 90%;
+    background-color: #1cb7ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+.add-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.main-content {
+    display: flex;
+    gap: 15px;
+}
+
+.service-schedule {
+    flex: auto;
+    height: 100%;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-schedule .header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+}
+
+.service-list {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-list .header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.service-search {
+    width: 100%;
+    height:40px;
+}
+
+.service-list .list, .service-schedule .schedule {
+    width: 100%;
+    height: 822px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.form {
+    width: 400px;
+    max-width: 90vw;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+.modal-header {
+    width: 100%;
+    height: 50px;
+    background-color: seagreen;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.modal-body {
+    flex: auto;
+    width: 100%;
+}
+
+.input {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.modal-footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.submit-btn,
+.cancel-btn {
+    flex: 1;
+    height: 100%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.submit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.cancel-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.cancel-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.service-name {
+    flex: 2;
+    font-size: 14px;
+}
+.service-price {
+    flex: 1;
+    font-size: 14px;
+}
+.edit-btn, .delete-btn {
+    margin-left: 8px;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-btn {
+    background-color: #1cb7ff;
+    transition: all 0.3s ease-out;
+}
+
+.edit-btn:hover {
+    background-color: #0080c0;
+    transition: all 0.3s ease-in;
+}
+
+.edit-btn img,
+.delete-btn img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.delete-btn {
+    background-color: #ff5429;
+    transition: all 0.3s ease-out;
+}
+
+.delete-btn:hover {
+    background-color: #c92800;
+    transition: all 0.3s ease-in;
+}
+
+
+

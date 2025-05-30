@@ -1,0 +1,13 @@
+:root {
+    /* Font Sizes */
+    --font-size-xs: 10px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-base: 18px;
+    --font-size-lg: 24px;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-weight-xbold: 800;
+}
