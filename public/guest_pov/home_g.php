@@ -48,7 +48,7 @@
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
+    <h1>Welcome to your Home away from Home</h1>
     <p>Learn more about our story, values, and what makes CvSU - Silang Hotel special.</p>
   </section>
 
