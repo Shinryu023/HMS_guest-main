@@ -28,7 +28,7 @@
       <a href="#payment" class="nav-link">Payment</a>
       <a href="#restaurant" class="nav-link">Restaurant</a>
     </div>
-    <!-- test -->
+    
     <!-- Guest Profile -->
     <div class="profile">
       <div class="name">John Doe</div>
