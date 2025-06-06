@@ -79,7 +79,7 @@
     }
 
     #home {
-      color: white;
+      /* color: white; */
       text-align: center;
       background: url('../images/Home/homebanner.png') center no-repeat center/cover;
     }
@@ -99,7 +99,7 @@
       padding: 10px 20px;
       background-color: orange;
       border: none;
-      color: white;
+      /* color: white; */
       font-weight: bold;
       cursor: pointer;
       border-radius: 5px;

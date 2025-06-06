@@ -31,3 +31,15 @@
     .btn:hover {
       background-color: #e5a94f;
     }
+    #home {
+      background: url('../images/Home/homebanner.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;;
+      color: white;
+      text-align: center;
+      min-height: 600px;
+    }
+    .text-shadow {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
