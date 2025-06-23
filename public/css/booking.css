@@ -1,0 +1,43 @@
+    .filter-box {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .room-card {
+      border: 2px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .room-card:hover {
+      border-color: #f39c12;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .selected {
+      border-color: #f39c12 !important;
+      background-color: #fff8e1;
+    }
+    .price {
+      font-weight: bold;
+      color: #f39c12;
+    }
+    #roomDetails {
+      min-height: 400px;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .book-now-btn:hover {
+    background-color: transparent !important;
+    color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+    transition: all 0.3s ease;
+    }
+
+    .reserve-btn:hover {
+    background-color: #ffc107 !important;
+    color: #fff !important;
+    border: 1px solid #ffc107 !important;
+    transition: all 0.3s ease;
+    }
